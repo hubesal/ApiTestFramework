@@ -9,9 +9,9 @@ namespace ApiTestFramework.Api.Facts
     public interface IFactsApi
     {
         [Get("random")]
-        public Task<Fact[]> GetRandomAsync(string animalType, int numberOfFacts);
+        public Task<List<FactViewModel>> GetRandomAsync(string animal_type, int amount);
 
         [Get("{id}")]
-        public Task<Fact> GetFactAsync([Path("id")] string factId);
+        public Task<FactViewModel> GetFactAsync([Path("id")] string factId);
     }
 }

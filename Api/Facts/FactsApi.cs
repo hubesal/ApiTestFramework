@@ -16,9 +16,9 @@ namespace ApiTestFramework.Api.Facts
             factsApi = RestClient.For<IFactsApi>(requester);
         }
 
-        public async Task<Fact[]> GetRandomFactsAsync(string animalType, int numberOfFacts) 
+        public async Task<List<FactViewModel>> GetRandomFactsAsync(string animalType, int numberOfFacts) 
             => await factsApi.GetRandomAsync(animalType, numberOfFacts);
 
-        public async Task GetFactAsync(string factId) => await factsApi.GetFactAsync(factId);
+        public async Task<FactViewModel> GetFactAsync(string factId) => await factsApi.GetFactAsync(factId);
     }
 }
