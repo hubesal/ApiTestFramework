@@ -10,6 +10,7 @@ namespace ApiTestFramework.Tests
     {
         private readonly Api.Api _api;
         private readonly Random _random;
+
         public FactsTests()
         {
             _api = new Api.Api();
