@@ -1,4 +1,4 @@
-﻿using ApiTestFramework.Models;
+﻿using ApiTestFramework.Models.Facts;
 using RestEase;
 using System.Collections.Generic;
 using System.Threading.Tasks;
