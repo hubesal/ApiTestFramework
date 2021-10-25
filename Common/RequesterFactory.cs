@@ -1,4 +1,5 @@
-﻿using RestEase;
+﻿using ApiTestFramework.Providers;
+using RestEase;
 using RestEase.Implementation;
 using System;
 using System.Net.Http;
@@ -9,7 +10,7 @@ namespace ApiTestFramework.Common
     {
         public static IRequester CreateRequester()
         {
-            var baseUrl = "https://cat-fact.herokuapp.com";
+            var baseUrl = ConfigurationProvider.ReadConfigVariable().BaseUrl;
             var httpClient = new HttpClient
             {
                 BaseAddress = new Uri(baseUrl),
