@@ -10,7 +10,7 @@ namespace ApiTestFramework.Providers
     {
         private const string configPath = "appsettings.json";
 
-        public static ConfigViewModel ReadConfigVariable()
+        public static ConfigViewModel Read()
         {
             var jsonFile = File.ReadAllText(configPath);
             var config = JsonConvert.DeserializeObject<ConfigViewModel>(jsonFile);

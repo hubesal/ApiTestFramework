@@ -10,7 +10,7 @@ namespace ApiTestFramework.Common
     {
         public static IRequester CreateRequester()
         {
-            var baseUrl = ConfigurationProvider.ReadConfigVariable().BaseUrl;
+            var baseUrl = ConfigurationProvider.Read().BaseUrl;
             var httpClient = new HttpClient
             {
                 BaseAddress = new Uri(baseUrl),
